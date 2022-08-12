@@ -22,10 +22,12 @@ namespace VectorUnitTests
 
             //Act
             Vector VectorC = VectorSimpleMath.AddVector(VectorA, VectorB);
-            string Result = $"{VectorC.VectorX},{VectorC.VectorY},{VectorC.VectorZ}";
-
+            
             //Assert
-            Assert.AreEqual(Result, "4,4,4");
+            Assert.AreEqual(VectorC.VectorX, 4);
+            Assert.AreEqual(VectorC.VectorY, 4);
+            Assert.AreEqual(VectorC.VectorZ, 4);
+            
         }
 
 
@@ -39,9 +41,10 @@ namespace VectorUnitTests
             Vector VectorB = new Vector(1, 1, 1);
 
             Vector VectorC = VectorSimpleMath.SubVector(VectorA, VectorB);
-            string Result = $"{VectorC.VectorX},{VectorC.VectorY},{VectorC.VectorZ}";
 
-            Assert.AreEqual(Result, "1,1,1");
+            Assert.AreEqual(VectorC.VectorX, 1);
+            Assert.AreEqual(VectorC.VectorY, 1);
+            Assert.AreEqual(VectorC.VectorZ, 1);
         }
 
 
@@ -55,9 +58,10 @@ namespace VectorUnitTests
             double Skalar = 2;
 
             Vector VectorC = VectorSimpleMath.DivSkalVector(VectorA, Skalar);
-            string Result = $"{VectorC.VectorX},{VectorC.VectorY},{VectorC.VectorZ}";
-
-            Assert.AreEqual(Result, "1,1,1");
+                        
+            Assert.AreEqual(VectorC.VectorX, 1);
+            Assert.AreEqual(VectorC.VectorY, 1);
+            Assert.AreEqual(VectorC.VectorZ, 1);
         }
 
 
@@ -116,9 +120,10 @@ namespace VectorUnitTests
             Vector VectorA = new Vector(2, 2, 2);
 
             Vector VectorC = VectorSimpleMath.NegateVector(VectorA);
-            string Result = $"{VectorC.VectorX},{VectorC.VectorY},{VectorC.VectorZ}";
-
-            Assert.AreEqual(Result, "-2,-2,-2");
+                        
+            Assert.AreEqual(VectorC.VectorX, -2);
+            Assert.AreEqual(VectorC.VectorY, -2);
+            Assert.AreEqual(VectorC.VectorZ, -2);
         }
 
     }

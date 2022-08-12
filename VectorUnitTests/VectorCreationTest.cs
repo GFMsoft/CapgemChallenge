@@ -16,15 +16,13 @@ namespace VectorUnitTests
         [TestMethod]
         public void Vector_CreateVector_ReturnsVectorCoords()
         {
-            //Arrange
+            //Arrange and Act
             Vector testVector = new Vector(2, 2, 2);
-
-            //Act
-            string result = "";
-            result = $"{testVector.VectorX},{testVector.VectorY},{testVector.VectorZ}";
-
+            
             //Assert
-            Assert.AreEqual(result, "2,2,2");
+            Assert.AreEqual(testVector.VectorX, 2);
+            Assert.AreEqual(testVector.VectorY, 2);
+            Assert.AreEqual(testVector.VectorZ, 2);
         }
 
 

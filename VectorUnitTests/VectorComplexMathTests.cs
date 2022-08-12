@@ -23,10 +23,11 @@ namespace VectorUnitTests
 
             //Act
             Vector VectorC = VectorComplexMath.MultSkalVector(VectorA, Skalar);
-            string Result = $"{VectorC.VectorX},{VectorC.VectorY},{VectorC.VectorZ}";
-
+            
             //Assert
-            Assert.AreEqual(Result, "4,4,4");
+            Assert.AreEqual(VectorC.VectorX, 4);
+            Assert.AreEqual(VectorC.VectorY, 4);
+            Assert.AreEqual(VectorC.VectorZ, 4);
         }
 
 
@@ -40,9 +41,10 @@ namespace VectorUnitTests
             Vector VectorB = new Vector(3, 5, 2);
 
             Vector VectorC = VectorComplexMath.CrossProductVector(VectorA, VectorB);
-            string Result = $"{VectorC.VectorX},{VectorC.VectorY},{VectorC.VectorZ}";
-
-            Assert.AreEqual(Result, "3,-1,-2");
+                        
+            Assert.AreEqual(VectorC.VectorX, 3);
+            Assert.AreEqual(VectorC.VectorY, -1);
+            Assert.AreEqual(VectorC.VectorZ, -2);
         }
 
 

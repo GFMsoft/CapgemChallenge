@@ -1,0 +1,17 @@
+
+
+Zu 1: Ich habe die 3-D-Vektoren als Klasse implementiert, weil ich mir offenlassen wollte, weitere Methoden wie Equals zur Vector Class hinzuzufügen.
+Am Ende habe ich dann tatsächlich keine weiteren Methoden für diese Klasse geschrieben und mich dazu entschieden, die Klasse so zu lassen.
+
+Zu 2: Kommt auf Szenario an. Ich habe mich hier dafür entschieden, die Vektoren nicht nachträglich zu verändern.
+Es werden bei Veränderungen oder Rechnungen neue Vektoren anhand der "Vorgänger" erstellt. Die alten Vektoren überlasse ich dem GarbageCollector.
+
+
+Zu 3: Ich prüfe jede Eigenschaft auf Gleichheit. Es werden also X,Y,Z von Vektor 1 mit X,Y,Z von Vektor 2 verglichen.
+Dazu nutze ich == für den direkten Vergleich und && (AND) in der Logik. Die Operatoren !=/==/= sind zwar überladbar, werden hier aber nicht überladen.
+
+Zu 4: Nach Erzeugung des Vektor-Objektes kann man mit der Methode "GetHashCode" den Hashcode (int) des Objektes ermitteln.
+Also in meinem Fall (Ausgabe in MessageBox):
+
+Vector TestVector = new Vector(2,3,4);
+MessageBox.Show($"Hashcode TestVector: {TestVector.GetHashCode()}");
